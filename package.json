@@ -17,7 +17,8 @@
     "react-native-btr": "^2.2.1",
     "react-native-paper": "^5.12.5",
     "react-native-tree-multi-select": "^1.6.0",
-    "react-native-vector-icons": "^10.2.0"
+    "react-native-vector-icons": "^10.2.0",
+    "expo-av": "~15.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
