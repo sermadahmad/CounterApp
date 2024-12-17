@@ -7,6 +7,8 @@ import MyCard from "./components/card";
 import Head from "./components/head";
 import { Button } from "react-native-paper";
 import { Audio } from "expo-av";
+import { VolumeManager } from "react-native-volume-manager";
+
 
 const App = () => {
   const playSound = async () => {
@@ -24,16 +26,22 @@ const App = () => {
     // Vibrate for 100ms
     Vibration.vibrate(10);
   };
+  VolumeManager.showNativeVolumeUI({ enabled: true });
+
   
   return (
     <View>
       <Text>Settings</Text>
-      <Button mode="contained"  onPress={()=>{
-        playSound();
-        handleVibration();
-      }}>
-        Press me
+      
+      <Button
+        icon="home"
+        mode="contained"
+        onPress={playSound}
+        style={{ margin: 10 }}
+      >
+        Play Sound
       </Button>
+      
     </View>
   );
 };
